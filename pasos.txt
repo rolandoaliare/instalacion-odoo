@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+se debería bajar los contenedores de docker, según el video el comando sería
+sd rmall / luego ejecutar oe -R y oe -
+
+instalacion
+script 1 para configurar locales y timezome de ubuntu
+el segundo script instalaría odoo y sus dependencias sin iniciar el servicio pero registrándolo
+
+#clonar odoo 
+pip install setuptools y wheel en carpeta odoo e instalar requirements.
+#clonar pyafip e instalar
+
+copiar módulos a <carpetademodulos>/aliare
+clonar regaby/odoo-custom branch 15.0-adhoc
+clonar odoo-argentina-ce.git -b 15.0_refact
+clonar OCA/reporting-engine.git
+clonar OCA/stock-logistics-warehouse.git
+clonar odoo/design-themes.git
+
+Agregar modulos a addons_path
+<carpetademodulos>/odoo-argentina-ce,<carpetademodulos>/odoo-custom,<carpetademodulos>/aliare
+
+Esto lo hace el script 2
+#ejecutar el siguiete comando para crear una instancia en es_AR con los módulos base,web y point_of_sale instalados
+#python odoo/odoo-bin -c config.cfg --language=es_AR --load-language=es_AR --init=base,web,point_of_sale --stop-after-init
+
+Esto lo tendría que hacer el script 3, copiar los módulos de aliare y
+luego instalar los demás módulos 
+python odoo/odoo-bin -c config.cfg --init=l10n_ar_afipws_fe,l10n_ar_pos_einvoice_ticket,web_responsive,pos_hide_cost_price_and_margin,pos_restrict,ks_pos_low_stock_alert,kg_hide_menu --stop-after-init
+
+#finalmente iniciar el odoo
+#python odoo/odoo-bin -c config.cfg
+
+Para iniciar el server de odoo habría que usar el comando systemclt, aunque se podría reiniciar para verificar que fue configurado para iniciar con el Ubuntu
+

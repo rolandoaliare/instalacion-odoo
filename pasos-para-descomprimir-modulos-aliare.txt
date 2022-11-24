@@ -1,0 +1,30 @@
+1. Crear el directorio para los módulos si no existe, usando el usuario de odoo.
+   Suponiento que el usuario sear "odoo" y el directorio de módulos sea /opt/odoo/sources, ejecutar
+
+   $ sudo su - odoo -c "mkdir /opt/odoo/sources/aliare"
+
+2. Copiar los módulos comprimidos al directorio creado en el punto 1
+   
+   $ sudo cp modulos-aliare-20221122.tar.gz /opt/odoo/sources/aliare
+
+3. Cambiar al usuario de odoo (Este usuario se crea con HOME=/opt/<nombreusuarioodoo>. Ejemplo /opt/odoo
+
+   $ sudo su - odoo
+
+4. Cambiar al directorio creado en el punto 1
+  
+   $ cd /opt/odoo/sources/aliare
+
+5. Descomprimir el archivo copiado en el punto 2
+
+   $ tar xf modulos-aliare-20221122.tar.gz
+
+6. Volver el usuario "normal"
+
+   $ exit
+
+7. Eliminar el archivo copiado en el punto 2
+
+   $ sudo rm /opt/odoo/sources/motulos-aliare-20221122.tar.gz
+
+

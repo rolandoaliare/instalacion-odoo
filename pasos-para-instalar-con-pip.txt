@@ -1,0 +1,10 @@
+La instalacion de dependencias de python con pip deberá realizarse con el usuario de odoo.
+
+Ejemplo:
+
+1. Cambio al usuario de odoo, suponiendo que sea "odoo"
+   $ sudo su - odoo
+2. Ejecuto instaldo la dependencia de python, por ejemplo dropbox
+   $ pip install dropbox
+3. Vuelvo al usuario original
+   $ exit

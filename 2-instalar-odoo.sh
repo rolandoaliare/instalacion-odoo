@@ -38,7 +38,7 @@ echo
 echo ODOO
 echo -----------------------
 cd /opt/$ODOO_USER
-sudo git clone https://www.github.com/odoo/odoo.git --depth 1 --branch 15.0 --single-branch 
+sudo git clone https://github.com/odoo/odoo.git --depth 1 --branch 15.0 --single-branch 
 sudo chown -R $ODOO_USER:$ODOO_USER /opt/$ODOO_USER
 sudo su - odoo -c "cd /opt/$ODOO_USER/odoo && pip3 install -r requirements.txt"
 echo

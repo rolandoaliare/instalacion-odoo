@@ -19,7 +19,7 @@ sudo apt install -y python3-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-d
 echo INSTALLANDO WKHTML2PDF
 echo -----------------------
 wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.focal_amd64.deb
-sudo apt install -y ./wkhtmltox_0.12.5-1.focal_amd64.deb
+sudo dpkg -i ./wkhtmltox_0.12.5-1.focal_amd64.deb
 
 ODOO_USER=odoo
 echo CREANDO USUARIO $ODOO_USER
@@ -65,7 +65,7 @@ addons_path = /opt/$ODOO_USER/odoo/addons
 logfile = /var/log/$ODOO_USER/odoo.log
 unaccent = True
 db_name = $DB_NAME
-db_filter = $DB_NAME
+dbfilter = $DB_NAME
 server_wide_modules = base,web
 EOF
 

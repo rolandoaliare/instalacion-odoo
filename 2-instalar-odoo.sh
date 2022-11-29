@@ -67,6 +67,8 @@ unaccent = True
 db_name = $DB_NAME
 dbfilter = $DB_NAME
 server_wide_modules = base,web
+http_interface = 127.0.0.1
+proxy_mode = True
 EOF
 
 sudo chown $ODOO_USER: /etc/$ODOO_USER.conf

@@ -19,7 +19,7 @@ sudo apt install -y python3-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-d
 echo INSTALLANDO WKHTML2PDF
 echo -----------------------
 wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.focal_amd64.deb
-sudo dpkg -i ./wkhtmltox_0.12.5-1.focal_amd64.deb
+sudo apt install ./wkhtmltox_0.12.5-1.focal_amd64.deb
 
 ODOO_USER=odoo
 echo CREANDO USUARIO $ODOO_USER

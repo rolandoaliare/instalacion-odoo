@@ -47,7 +47,7 @@ echo -----------------------
 sudo mkdir -p /var/log/$ODOO_USER
 sudo chown $ODOO_USER:root /var/log/$ODOO_USER
 read -p "Nombre DB[$ODOO_USER]:" DB_NAME
-DB_NAME=${DBNAME:-$ODOO_USER}
+DB_NAME=${DB_NAME:-$ODOO_USER}
 echo "La base de datos será $DB_NAME"
 CONFIG_FILE=/etc/$ODOO_USER.conf
 if [ -f "$CONFIG_FILE" ]; then

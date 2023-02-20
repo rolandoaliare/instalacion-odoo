@@ -104,7 +104,8 @@ EOF
 sudo chmod 0644 /etc/systemd/system/odoo.service
 
 sudo mkdir -p /var/opt/$odoouser/data_dir
-sudo chown -R $ODOO_USER:$ODOO_USER
+#sudo chown -R $ODOO_USER:$ODOO_USER
+sudo chown -R $ODOO_USER:$ODOO_USER /var/opt/$odoouser/data_dir
 
 sudo su - odoo -c "/usr/bin/env python3 /opt/$ODOO_USER/odoo/odoo-bin -c $CONFIG_FILE --language es_AR --load-language es_AR --init base,web,point_of_sale --data-dir /var/opt/$ODOO_USER/data_dir --without-demo all --save --db-template template1 --no-database-list --stop-after-init"
 
